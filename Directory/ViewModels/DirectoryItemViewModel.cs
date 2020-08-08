@@ -28,7 +28,6 @@ namespace Kiosk_File_Explorer.Directory.ViewModels
         /// <summary>
         /// The name of this directory item
         /// </summary>
-        //public string Name { get { return this.Type == DirectoryItemType.Drive ? this.FullPath : DirectoryStructure.GetFileFolderName(this.FullPath); } }
 
         private string name;
 
@@ -46,7 +45,6 @@ namespace Kiosk_File_Explorer.Directory.ViewModels
         /// <summary>
         /// A list of all children contained inside this item
         /// </summary>
-        //public ObservableCollection<DirectoryItemViewModel> Children { get; set; }
 
         private ObservableCollection<DirectoryItemViewModel> children;
 

@@ -20,7 +20,6 @@ namespace Kiosk_File_Explorer.Directory.ViewModels.Base
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
-        }
-        //public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
+        } 
     }
 }

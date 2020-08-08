@@ -1,7 +1,7 @@
 ﻿using Kiosk_File_Explorer.Directory.Data;
 using Kiosk_File_Explorer.Directory.ViewModels.Base;
 using System.Collections.ObjectModel;
-using System.Linq;
+using System.Linq; 
 using System.Windows.Input;
 
 namespace Kiosk_File_Explorer.Directory.ViewModels
@@ -150,5 +150,9 @@ namespace Kiosk_File_Explorer.Directory.ViewModels
             this.Children = new ObservableCollection<DirectoryItemViewModel>(
                                 children.Select(content => new DirectoryItemViewModel(content.FullPath, content.Type)));
         }
+
     }
+
+
+   
 }

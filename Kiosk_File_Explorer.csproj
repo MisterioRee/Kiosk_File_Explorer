@@ -64,8 +64,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Converter\HeaderToImageConverter.cs" />
+    <Compile Include="Directory\Commands\FileCommand.cs" />
     <Compile Include="Directory\Data\DirectoryItem.cs" />
     <Compile Include="Directory\Data\DirectoryItemType.cs" />
+    <Compile Include="Directory\Data\FilleActionType.cs" />
     <Compile Include="Directory\DirectoryStructure.cs" />
     <Compile Include="Directory\ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="Directory\ViewModels\Base\RelayCommand.cs" />

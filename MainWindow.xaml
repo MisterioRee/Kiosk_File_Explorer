@@ -21,7 +21,15 @@
                     <StackPanel Orientation="Horizontal">
                         <Image Width="20" Margin="3" 
                                     Source="{Binding ImageName, Converter={x:Static local:HeaderToImageConverter.Instance}}" />
-                        <TextBlock VerticalAlignment="Center" Text="{Binding Name}" />
+                        <TextBlock VerticalAlignment="Center" Text="{Binding Name}">
+                        </TextBlock>
+                        <StackPanel.ContextMenu>
+                            <ContextMenu Name="cm"  StaysOpen="true">
+                                <MenuItem Header="Copy" Tag="{Binding FullPath}" Click="Click_Copy" />
+                                <MenuItem Header="Cut" Tag="{Binding FullPath}" Click="Click_Cut"/>
+                                <MenuItem Header="Paste" Tag="{Binding FullPath}" Click="Click_Paste"/>
+                            </ContextMenu>
+                        </StackPanel.ContextMenu>
                     </StackPanel>
                </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>

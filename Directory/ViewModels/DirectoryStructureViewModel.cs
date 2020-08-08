@@ -6,6 +6,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Kiosk_File_Explorer.Directory.ViewModels
 {
@@ -39,5 +41,6 @@ namespace Kiosk_File_Explorer.Directory.ViewModels
         }
 
         #endregion
+          
     }
 }

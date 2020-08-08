@@ -8,9 +8,19 @@ namespace Kiosk_File_Explorer.Directory.ViewModels.Base
 
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// The event that is fired when any child property changes its value
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
+        /// 
+        protected void OnPropertyRaised(string propertyname)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
+            }
+        }
+        //public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
     }
 }

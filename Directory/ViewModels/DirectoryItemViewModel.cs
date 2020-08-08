@@ -28,12 +28,39 @@ namespace Kiosk_File_Explorer.Directory.ViewModels
         /// <summary>
         /// The name of this directory item
         /// </summary>
-        public string Name { get { return this.Type == DirectoryItemType.Drive ? this.FullPath : DirectoryStructure.GetFileFolderName(this.FullPath); } }
+        //public string Name { get { return this.Type == DirectoryItemType.Drive ? this.FullPath : DirectoryStructure.GetFileFolderName(this.FullPath); } }
+
+        private string name;
+
+        public string Name
+        {
+            get { return this.Type == DirectoryItemType.Drive ? this.FullPath : DirectoryStructure.GetFileFolderName(this.FullPath); }
+            set
+            {
+                name = value;
+                OnPropertyRaised("Name");
+            }
+        }
+
 
         /// <summary>
         /// A list of all children contained inside this item
         /// </summary>
-        public ObservableCollection<DirectoryItemViewModel> Children { get; set; }
+        //public ObservableCollection<DirectoryItemViewModel> Children { get; set; }
+
+        private ObservableCollection<DirectoryItemViewModel> children;
+
+        public ObservableCollection<DirectoryItemViewModel> Children
+        {
+            get { return children; }
+            set
+            {
+                children = value;
+                OnPropertyRaised("Children");
+            }
+        }
+
+
 
         /// <summary>
         /// Indicates if this item can be expanded
